@@ -37,3 +37,8 @@ resource "aws_db_instance" "cheidelacoriera_db" {
   password             = "${var.db_password}"
   parameter_group_name = "default.postgresql9.6"
 }
+
+# ECR repository
+resource "aws_ecr_repository" "cheidelacoriera_ecr" {
+  name = "cheidelacoriera"
+}
